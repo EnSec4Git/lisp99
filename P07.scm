@@ -1,0 +1,11 @@
+(define (my-flatten list)
+    (cond ((null? list) list)
+        ((list? (car list))
+            (append 
+                (my-flatten (car list))
+                (my-flatten (cdr list))
+            )
+        )
+        (else (cons (car list) (my-flatten (cdr list))))
+    )
+)

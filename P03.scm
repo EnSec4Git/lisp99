@@ -1,0 +1,5 @@
+(define (element-at list index)
+    (if (= index 1) (car list)
+        (element-at (cdr list) (- index 1))
+    )
+)

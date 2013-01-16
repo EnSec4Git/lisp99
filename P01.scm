@@ -1,0 +1,5 @@
+(define (last-list list)
+    (if (null? (cdr list))
+        (car list)
+        (last-list (cdr list)))
+    )
